@@ -1,4 +1,3 @@
-// frontend/src/services/api.js
 const API_BASE = 'https://resume-builder-production-573d.up.railway.app/api';
 
 export const resumeAPI = {
@@ -11,7 +10,7 @@ export const resumeAPI = {
       });
       return await response.json();
     } catch (error) {
-      console.warn("Backend not connected. Running in local mode.");
+      console.warn("Backend not connected.");
       return { success: true, message: "Saved locally (Backend offline)" };
     }
   },
