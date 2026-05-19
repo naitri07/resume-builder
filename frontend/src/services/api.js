@@ -10,8 +10,8 @@ export const resumeAPI = {
       });
       return await response.json();
     } catch (error) {
-      console.warn("Backend not connected.");
-      return { success: true, message: "Saved locally (Backend offline)" };
+      console.error("Backend error:", error);
+      return { success: false, message: "Backend not connected" };
     }
   },
 
@@ -20,7 +20,7 @@ export const resumeAPI = {
       const response = await fetch(`${API_BASE}/resume/${userId}`);
       return await response.json();
     } catch (error) {
-      console.warn("Backend not connected.");
+      console.error("Backend error:", error);
       return { success: true, data: {} };
     }
   }
