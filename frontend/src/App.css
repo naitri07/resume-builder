@@ -183,30 +183,101 @@
   }
 }
 
-/* Mobile Responsive */
+/* ============================================ */
+/* MOBILE RESPONSIVE STYLES (768px and below) */
+/* ============================================ */
+
 @media (max-width: 768px) {
-  * {
-    max-width: 100%;
-    box-sizing: border-box;
+  body {
+    padding: 10px;
   }
   
-  .App, .container, form, div[class*="form"] {
-    padding: 10px !important;
-    margin: 0 !important;
+  .App, .resume-builder-container {
+    padding: 15px;
+    border-radius: 8px;
   }
   
-  input, textarea, select, button {
-    width: 100% !important;
-    font-size: 16px !important;
-    padding: 12px !important;
-    margin: 5px 0 !important;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  /* Stack buttons vertically on mobile */
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
   }
   
   button {
-    display: block !important;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
   }
   
-  div[class*="row"], div[class*="flex"] {
-    flex-direction: column !important;
+  /* Make personal info single column on mobile */
+  .personal-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  /* Better touch targets for inputs */
+  input, textarea, select {
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on focus in iOS */
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Cards stack well on mobile */
+  .card {
+    padding: 12px;
+  }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+  .App, .resume-builder-container {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 22px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+  }
+}
+
+/* Tablet landscape (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .App, .resume-builder-container {
+    padding: 20px;
+    max-width: 95%;
+  }
+  
+  .personal-info-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
