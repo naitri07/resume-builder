@@ -1,27 +1,38 @@
-const API_BASE = "https://resume-builder-production-573d.up.railway.app";
+// Production (Render)
+const API_BASE = 'https://resume-builder-7hj9.onrender.com/api';
 
 export const resumeAPI = {
-  saveResume: async (formData, userId = "user123") => {
+  saveResume: async (formData, userId = 'user123') => {
     try {
-      const response = await fetch(`${API_BASE}/api/resume/save`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch(`${API_BASE}/resume/save`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, ...formData })
       });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       return await response.json();
     } catch (error) {
-      console.error("Backend Error:", error);
-      return { success: false, message: "Backend not connected" };
+      console.error('Save resume error:', error);
+      throw error;
     }
   },
 
-  getResume: async (userId = "user123") => {
+  getResume: async (userId = 'user123') => {
     try {
-      const response = await fetch(`${API_BASE}/api/resume/${userId}`);
+      const response = await fetch(`${API_BASE}/resume/${userId}`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       return await response.json();
     } catch (error) {
-      console.error("Load Error:", error);
-      return { success: true, data: {} };
+      console.error('Get resume error:', error);
+      throw error;
     }
   }
 };
