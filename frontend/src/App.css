@@ -182,3 +182,31 @@
     border-right-color: var(--border);
   }
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .App, .container, form, div[class*="form"] {
+    padding: 10px !important;
+    margin: 0 !important;
+  }
+  
+  input, textarea, select, button {
+    width: 100% !important;
+    font-size: 16px !important;
+    padding: 12px !important;
+    margin: 5px 0 !important;
+  }
+  
+  button {
+    display: block !important;
+  }
+  
+  div[class*="row"], div[class*="flex"] {
+    flex-direction: column !important;
+  }
+}
