@@ -1,16 +1,49 @@
-# React + Vite
+# 📄 Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application that allows users to create, customize, and save professional resumes. Built with the MERN stack (MongoDB, Express, React, Node.js).
 
-Currently, two official plugins are available:
+## 🌐 Project Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View Live Application] (https://resume-builder-topaz-eight.vercel.app)
 
-## React Compiler
+**Backend API**  [resume-builder-7hj9.onrender.com](https://resume-builder-7hj9.onrender.com) 
+**Database**  MongoDB Atlas (Cloud) 
+**GitHub Repo**  [github.com/naitri07/resume-builder](https://github.com/naitri07/resume-builder) 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ✅ **Create Professional Resumes** - Add personal info, experience, education, skills, and projects
+- ✅ **Two Templates** - Choose between ATS-friendly and Modern design templates
+- ✅ **Save to Database** - Store resumes permanently in MongoDB Atlas
+- ✅ **Download as PDF** - Export your resume as a PDF file
+- ✅ **Responsive Design** - Works on desktop and mobile devices
+- ✅ **Real-time Preview** - See changes as you type
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+### Frontend
+- **React.js** - UI framework
+- **CSS3** - Styling (custom responsive design)
+- **Axios** - API calls
+- **Vercel** - Hosting
+
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB Atlas** - Cloud database
+- **Mongoose** - ODM for MongoDB
+- **Render** - Backend hosting
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- MongoDB Atlas account (or local MongoDB)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/naitri07/resume-builder.git
+   cd resume-builder
